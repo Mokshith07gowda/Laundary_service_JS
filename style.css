@@ -1,0 +1,721 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #667eea , #764ba2 );
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 10vh;
+    background: linear-gradient(to right, rgb(192, 68, 214), rgb(255, 170, 0));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position:static;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 60px;
+    width: auto;
+    margin: 0 20px;
+    border-radius: 50%;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    gap: 4.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    transition:  0.5s ease;
+    cursor: pointer;
+}
+
+.nav-links a:hover {
+    color: rgb(28, 15, 15);
+}
+
+.username {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-right: 40px;
+}
+
+.username:hover {
+    background: rgba(250, 22, 22, 0.722);
+    cursor: pointer;
+    animation: washMe 2s ;
+}
+
+@keyframes washMe {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-5px);
+    }
+}
+
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    margin-top: 10vh;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 5%;
+}
+
+.hero-left {
+    flex: 1;
+    color: white;
+}
+
+.hero-left h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.highlight {
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.hero-left p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 90%;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(to right, #ff6b6b, #feca57);
+    color: white;
+    padding: 14px 28px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    color: black;
+    box-shadow: 0 12px 35px rgba(255, 107, 107, 0.5);
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10%;
+    transition: transform 1s ease;
+}
+
+.hero-image:hover{
+     transform: translateY(-10px);
+     box-shadow: 0 12px 35px rgba(80, 76, 76, 0.5);
+
+}
+
+.service-overview {
+    background: linear-gradient(135deg, #ef4444, #58a24b);
+    padding: 60px 0;
+    color: white;
+    text-align: center;
+}
+
+.achievements {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.achievement {
+    text-align: center;
+}
+
+.achievement h3 {
+    font-size: 2.5rem;
+    color: #feca57;
+    margin-bottom: 10px;
+}
+
+.achievement p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.booking-services {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)) ,url(https://img.freepik.com/premium-photo/public-laundry-room-interior-design-vector-cartoon-illustration-laundromat-with-row-washing-drying-machines-detergent-powder-boxes-cash-register-empty-rack-bench_1028938-221532.jpg);
+    padding: 60px 5%;
+    min-height: 100vh;
+}
+
+.booking-content {
+    display: flex;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.services-left {
+    flex: 1;
+    background: rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
+.services-title{
+    padding: 10px;
+}
+
+.services-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-section {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.booking-form {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.service-action-row{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.service-item no-border-bottom{
+    border-bottom: none;
+}
+
+.service-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.service-icon {
+    font-size: 1.5rem;
+    color: #667eea;
+}
+
+.add-to-cart-info-message{
+    text-align: center; 
+    margin-top: 30px; 
+    color: #667eea; 
+    font-weight: 500;
+}
+
+.added-items-title{
+    color: #333; 
+    margin-bottom: 20px;
+}
+
+.service-details h4 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.service-price {
+    color: #667eea;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+
+
+.service-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.add-btn, .remove-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.add-btn {
+    background: #28a745;
+    color: white;
+}
+
+.add-btn:hover {
+    background: #218838;
+}
+
+.remove-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.remove-btn:hover {
+    background: #c82333;
+}
+
+.cart-header-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #666;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+.cart-empty-message{ 
+    text-align: center; 
+    color: #999; 
+    padding: 40px 20px; 
+}
+
+.cart-empty-icon{ 
+    font-size: 3rem;
+    margin-bottom: 15px; 
+}
+
+.total-amount {
+    background: linear-gradient(to right, #ff6b6b, #feca57);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.book-now-title {
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.book-now-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.book-now-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.5);
+}
+
+.quality-section {
+    background: white;
+    padding: 80px 5%;
+}
+
+.quality-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.quality-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+.quality-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.quality-item {
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.quality-item:hover {
+    transform: translateY(-10px);
+}
+
+.quality-icon {
+    font-size: 3rem;
+    color: #667eea;
+    margin-bottom: 20px;
+}
+
+.quality-item h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.quality-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.newsletter-section {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    padding: 60px 5%;
+    color: white;
+}
+
+.newsletter-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.newsletter-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.newsletter-input {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    min-width: 200px;
+}
+
+.newsletter-btn {
+    padding: 15px 30px;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.newsletter-btn:hover {
+    background: #ff5252;
+    transform: translateY(-2px);
+}
+
+.footer {
+    background: #2c3e50;
+    color: white;
+    padding: 50px 5% 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-section h3 {
+    color: #feca57;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.footer-section p, .footer-section a {
+    color: #bdc3c7;
+    line-height: 1.8;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #bdc3c7;
+    font-size: 1.5rem;
+    transition:  0.7s ease;
+}
+
+.social-icons a:hover {
+    color: #fe5757;
+    transform: translateY(-8px) scale(1.1);
+    
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #34495e;
+    color: #bdc3c7;
+}
+
+.success-message {
+    background: #28a745;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    text-align: center;
+    display: none;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(to right, #ff6b6b, #feca57);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: none;
+    z-index: 1000;
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 107, 107, 0.5);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 3%;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-left h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-left p {
+        max-width: 100%;
+    }
+
+    .hero-right {
+        margin-top: 2rem;
+    }
+
+    .hero-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .booking-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .achievements {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletter-input {
+        min-width: 280px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;  
+        gap: 1rem;         
+        justify-content: center;
+    }
+
+    .username {
+        margin-right: 0;   
+        text-align: center;
+    }
+
+    .service-item {
+        flex-direction: column; 
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .service-action-row {
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem 3%;
+        gap: 1rem;
+    }
+
+    .hero {
+        height: auto;
+        padding: 2rem 3%;
+    }
+
+    .hero-left h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .quality-title {
+        font-size: 2rem;
+    }
+
+    .newsletter-content h2 {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .booking-content {
+        padding: 0 10px; 
+    }
+
+    .cart-header-row, .cart-item {
+        font-size: 0.9rem; 
+    }
+}
+   
