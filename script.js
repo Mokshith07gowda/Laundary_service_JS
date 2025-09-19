@@ -1,4 +1,3 @@
-
 emailjs.init("YOUR_USER_ID"); 
 
 let cart = [];
@@ -23,6 +22,7 @@ function addToCart(serviceName, price) {
         });
     }
     updateCart();
+    updateButtonVisibility();
 }
 
 function removeFromCart(serviceName, price) {
@@ -38,6 +38,23 @@ function removeFromCart(serviceName, price) {
     }
     
     updateCart();
+    updateButtonVisibility();
+}
+
+function updateButtonVisibility() {
+    const serviceItems = document.querySelectorAll('.service-item');
+    
+    serviceItems.forEach(item => {
+        const serviceName = item.getAttribute('data-service');
+        const serviceActions = item.querySelector('.service-actions');
+        const cartItem = cart.find(cartItem => cartItem.name === serviceName);
+        
+        if (cartItem) {
+            serviceActions.innerHTML = `<button class="remove-btn" onclick="removeFromCart('${serviceName}', ${item.getAttribute('data-price')})">Remove Item</button>`;
+        } else {
+            serviceActions.innerHTML = `<button class="add-btn" onclick="addToCart('${serviceName}', ${item.getAttribute('data-price')})">Add Item</button>`;
+        }
+    });
 }
 
 function updateCart() {
@@ -46,8 +63,8 @@ function updateCart() {
     
     if (cart.length === 0) {
         cartItemsDiv.innerHTML = `
-            <div style="text-align: center; color: #999; padding: 40px 20px;">
-                <i class="fas fa-shopping-cart" style="font-size: 3rem; margin-bottom: 15px;"></i>
+            <div class="cart-empty-message">
+                <i class="fas fa-shopping-cart cart-empty-icon"></i>
                 <p>No items added yet</p>
             </div>
         `;
@@ -85,8 +102,7 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
     
     const fullName = document.getElementById('fullName').value;
     const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-
+    const phone = document.getElementById('phone').value
     let cartItemsText = '';
     cart.forEach((item, index) => {
         cartItemsText += `${index + 1}. ${item.name} (Qty: ${item.quantity}) - ₹${(item.price * item.quantity).toFixed(2)}\n`;
@@ -118,16 +134,16 @@ function showSuccessMessage() {
     const successMessage = document.getElementById('successMessage');
     successMessage.style.display = 'block';
         
-        setTimeout(() => {
-            successMessage.style.display = 'none';
-        }, 5000);
-    }
-    
-    
-    function resetForm() {
+    setTimeout(() => {
+        successMessage.style.display = 'none';
+    }, 5000);
+}
+
+function resetForm() {
     document.getElementById('bookingForm').reset();
     cart = [];
     updateCart();
+    updateButtonVisibility();
 }
 
 function subscribeNewsletter() {
@@ -189,12 +205,10 @@ function animateOnScroll() {
 }
 
 window.addEventListener('scroll', animateOnScroll);
-        
+                
 document.addEventListener('DOMContentLoaded', function() {
     updateCart();
+    updateButtonVisibility();
     animateOnScroll();
 });
-
-
-
     
