@@ -1,3 +1,4 @@
+
 * {
      margin: 0;
      padding: 0;
@@ -75,7 +76,6 @@ body {
         transform: translateY(-5px);
     }
 }
-
 
 .hero {
     height: 100vh;
@@ -157,7 +157,6 @@ body {
 .hero-image:hover{
      transform: translateY(-10px);
      box-shadow: 0 12px 35px rgba(80, 76, 76, 0.5);
-
 }
 
 .service-overview {
@@ -288,8 +287,6 @@ body {
     font-weight: bold;
     font-size: 1.1rem;
 }
-
-
 
 .service-actions {
     display: flex;
