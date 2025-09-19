@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fresh Laundry Service</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="index.ico">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
+    
 </head>
 
 <body>
@@ -65,7 +65,7 @@
                 <h2 class="services-title">Our Services</h2>
                 <p class="add-to-cart-info">Click On The Add To Cart Button To Add The Services To Your Cart</p>
 
-                <div class="service-item">
+                <div class="service-item" data-service="Dry Cleaning" data-price="200">
                     <div class="service-info">
                         <i class="fas fa-tshirt service-icon"></i>
                         <div class="service-details">
@@ -75,14 +75,12 @@
                     <div class="service-action-row">
                         <span class="service-price">₹200.00</span>
                         <div class="service-actions">
-                            <button class="remove-btn" onclick="removeFromCart('Dry Cleaning', 200)">Remove
-                                Item</button>
                             <button class="add-btn" onclick="addToCart('Dry Cleaning', 200)">Add Item</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="service-item">
+                <div class="service-item" data-service="Wash & Fold" data-price="100">
                     <div class="service-info">
                         <i class="fas fa-soap service-icon"></i>
                         <div class="service-details">
@@ -92,13 +90,12 @@
                     <div class="service-action-row">
                         <span class="service-price">₹100.00</span>
                         <div class="service-actions">
-                            <button class="remove-btn" onclick="removeFromCart('Wash & Fold', 100)">Remove Item</button>
                             <button class="add-btn" onclick="addToCart('Wash & Fold', 100)">Add Item</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="service-item">
+                <div class="service-item" data-service="Ironing" data-price="30">
                     <div class="service-info">
                         <i class="fas fa-tshirt service-icon"></i>
                         <div class="service-details">
@@ -108,13 +105,12 @@
                     <div class="service-action-row">
                         <span class="service-price">₹30.00</span>
                         <div class="service-actions">
-                            <button class="remove-btn" onclick="removeFromCart('Ironing', 30)">Remove Item</button>
                             <button class="add-btn" onclick="addToCart('Ironing', 30)">Add Item</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="service-item">
+                <div class="service-item" data-service="Stain Removal" data-price="500">
                     <div class="service-info">
                         <i class="fas fa-spray-can service-icon"></i>
                         <div class="service-details">
@@ -124,14 +120,12 @@
                     <div class="service-action-row">
                         <span class="service-price">₹500.00</span>
                         <div class="service-actions">
-                            <button class="remove-btn" onclick="removeFromCart('Stain Removal', 500)">Remove
-                                Item</button>
                             <button class="add-btn" onclick="addToCart('Stain Removal', 500)">Add Item</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="service-item">
+                <div class="service-item" data-service="Leather & Suede Cleaning" data-price="999">
                     <div class="service-info">
                         <i class="fas fa-gem service-icon"></i>
                         <div class="service-details">
@@ -141,15 +135,12 @@
                     <div class="service-action-row">
                         <span class="service-price">₹999.00</span>
                         <div class="service-actions">
-                            <button class="remove-btn" onclick="removeFromCart('Leather & Suede Cleaning', 999)">Remove
-                                Item</button>
-                            <button class="add-btn" onclick="addToCart('Leather & Suede Cleaning', 999)">Add
-                                Item</button>
+                            <button class="add-btn" onclick="addToCart('Leather & Suede Cleaning', 999)">Add Item</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="service-item no-border-bottom">
+                <div class="service-item no-border-bottom" data-service="Wedding Dress Cleaning" data-price="2800">
                     <div class="service-info">
                         <i class="fas fa-ring service-icon"></i>
                         <div class="service-details">
@@ -159,10 +150,7 @@
                     <div class="service-action-row">
                         <span class="service-price">₹2800.00</span>
                         <div class="service-actions">
-                            <button class="remove-btn" onclick="removeFromCart('Wedding Dress Cleaning', 2800)">Remove
-                                Item</button>
-                            <button class="add-btn" onclick="addToCart('Wedding Dress Cleaning', 2800)">Add
-                                Item</button>
+                            <button class="add-btn" onclick="addToCart('Wedding Dress Cleaning', 2800)">Add Item</button>
                         </div>
                     </div>
                 </div>
